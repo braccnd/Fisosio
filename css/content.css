@@ -1,0 +1,287 @@
+:root {
+   --grn: #9ef09e;
+   --ylw: #ffff8f;
+   --blu: #473d8a;
+   --opc: #ffffffcc;
+   --trn: all 0.3s;
+   --blur: blur(10px);
+   --gdn: linear-gradient(135deg, var(--grn), var(--ylw));
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   transition: var(--trn);
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* nav */
+#navBar {
+   top: 0;
+   z-index: 1;
+   width: 100%;
+   padding: 1em;
+   display: flex;
+   position: sticky;
+   align-items: center;
+   backdrop-filter: var(--blur);
+   background-color: var(--opc);
+   justify-content: space-between;
+}
+#navBar menu,
+a {
+   list-style: none;
+   color: var(--blu);
+   text-decoration: none;
+}
+#navBar .home-link {
+   font-weight: bold;
+}
+#navBar,
+.nav-container {
+   gap: 1em;
+   display: flex;
+   align-items: center;
+}
+#navBar .nav-item2 a {
+   gap: 5px;
+   display: flex;
+}
+
+/* dropdown */
+#dropDownParent {
+   position: relative;
+}
+#dropDownChild {
+   top: 2em;
+   row-gap: 1em;
+   display: none;
+   padding: 5px 1em;
+   width: max-content;
+   position: absolute;
+   border-radius: 5px;
+   flex-direction: column;
+   backdrop-filter: var(--blur);
+   background-color: var(--opc);
+}
+#dropDownParent:focus-within #dropDownChild {
+   display: flex;
+}
+#dropDownChild li:last-child {
+   opacity: 0.6;
+   cursor: none;
+   pointer-events: none;
+}
+
+/* navbar-button */
+#openSidebar {
+   border: none;
+   display: none;
+   background: none;
+   color: var(--blu);
+}
+#closeSidebar {
+   border: none;
+   display: none;
+   background: none;
+   color: var(--blu);
+}
+#startButton {
+   padding: 5px 1em;
+   background: none;
+   color: var(--blu);
+   border-radius: 1em;
+   transition: var(--trn);
+   border: 1px solid var(--blu);
+}
+#startButton:hover {
+   color: white;
+   background-color: var(--blu);
+}
+
+/* header */
+header {
+   padding: 3em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+header .header-text {
+   gap: 5px;
+   width: 768px;
+   display: flex;
+   line-height: 1.5;
+   text-align: center;
+   flex-direction: column;
+}
+
+/* main */
+main {
+   display: flex;
+   flex-direction: column;
+}
+main section {
+   gap: 1em;
+   padding: 3em;
+   display: flex;
+   min-height: 100dvh;
+   align-items: center;
+   border-top: 1px solid;
+   flex-direction: column;
+   justify-content: start;
+}
+
+/* material */
+#material {
+   position: relative;
+   align-items: unset;
+}
+#material .material-search {
+   padding: 1em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+#material .material-search input {
+   top: 60px;
+   width: 75vw;
+   padding: 1em;
+   background: none;
+   position: absolute;
+   border-radius: 1em;
+   border: 1px solid var(--blu);
+}
+#material .material-container {
+   padding: 3em;
+}
+
+/* material-list */
+#materialList {
+   gap: 1em;
+   display: grid;
+   list-style: none;
+   justify-content: center;
+   grid-template-columns: repeat(auto-fit, 300px);
+}
+#materialList .material-item {
+   gap: 1em;
+   height: 100%;
+   padding: 1em;
+   display: flex;
+   line-height: 1.5;
+   border: 1px solid;
+   text-align: center;
+   border-radius: 1em;
+   align-items: center;
+   flex-direction: column;
+}
+#materialList .material-item img {
+   aspect-ratio: 1/1;
+   height: 100%;
+}
+#materialList .material-item [data-open-modal],
+.mulai-materi-button {
+   width: 100%;
+   padding: 5px 1em;
+   background: none;
+   border: 1px solid;
+   border-radius: 1em;
+   align-self: center;
+   transition: var(--trn);
+
+   &:hover {
+      color: white;
+      background-color: var(--blu);
+   }
+}
+
+/* dialog */
+#dialog {
+   top: 50%;
+   left: 50%;
+   padding: 1em;
+   min-width: 300px;
+   width: fit-content;
+   border-radius: 1em;
+   border: 1px solid var(--blu);
+   transform: translate(-50%, -50%);
+}
+#dialog .dialog-container {
+   gap: 3em;
+   display: flex;
+   text-align: left;
+}
+#dialog .dialog-main {
+   gap: 1em;
+   display: flex;
+   flex-direction: column;
+}
+#dialog .dialog-main-text {
+   height: 100%;
+   display: flex;
+   line-height: 1.5;
+   flex-direction: column;
+   justify-content: center;
+}
+#dialog .dialog-main [data-close-modal] {
+   width: 0;
+   border: none;
+   background: none;
+}
+
+/** responsive  */
+@media (max-width: 650px) {
+   /* dialog */
+   #dialog .dialog-container {
+      gap: unset;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+   }
+}
+@media (max-width: 600px) {
+   /* navbar */
+   #navBar .nav-container {
+      display: none;
+      top: 0;
+      right: 0;
+      width: 50%;
+      padding: 1em;
+      height: 100dvh;
+      position: fixed;
+      align-items: start;
+      flex-direction: column;
+      background-color: white;
+      border-left: 1px solid var(--blu);
+   }
+   #navBar .nav-item5 {
+      width: 100%;
+      margin-top: auto;
+   }
+
+   /* dropdown */
+   #dropDownParent {
+      position: unset;
+   }
+   #dropDownChild {
+      width: 50%;
+      position: unset;
+      margin-top: 10px;
+   }
+
+   /* navbar-button */
+   #openSidebar {
+      display: block;
+   }
+   #closeSidebar {
+      display: block;
+   }
+   #startButton {
+      width: 100%;
+   }
+}

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Fisosio | Materi</title>
+      <link rel="stylesheet" href="../css/content.css" />
+   </head>
+   <body>
+      <!-- nav -->
+      <nav id="navBar">
+         <a class="home-link" href="../html/main.html">Fisosio</a>
+         <button id="openSidebar" type="button" onclick="openSidebar()">
+            <svg
+               xmlns="http://www.w3.org/2000/svg"
+               width="16"
+               height="16"
+               fill="currentColor"
+               class="bi bi-list"
+               viewBox="0 0 16 16">
+               <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+         </button>
+         <menu id="navContainer" class="nav-container">
+            <li class="nav-item1">
+               <button id="closeSidebar" type="button" onclick="closeSidebar()">
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     width="16"
+                     height="16"
+                     fill="currentColor"
+                     class="bi bi-x-lg"
+                     viewBox="0 0 16 16">
+                     <path
+                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                  </svg>
+               </button>
+            </li>
+            <li class="nav-item2" id="dropDownParent">
+               <a href="javascript:void(0)"
+                  >Materi
+                  <span>
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-caret-down-fill"
+                        viewBox="0 0 16 16">
+                        <path
+                           d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                     </svg>
+                  </span>
+               </a>
+               <menu id="dropDownChild">
+                  <li><a href="content.html">Pengetahuan Alam</a></li>
+                  <li><a href="#">Pengetahuan Sosial</a></li>
+               </menu>
+            </li>
+            <li class="nav-item3"><a href="#">Latihan</a></li>
+            <li class="nav-item4"><a href="#">Lainnya</a></li>
+            <li class="nav-item5">
+               <button id="startButton" type="button">Mulai</button>
+            </li>
+         </menu>
+      </nav>
+
+      <!-- header -->
+      <header>
+         <div class="header-text">
+            <h1>Temukan Materi IPA Disini!</h1>
+            <p>
+               Pelajari berbagai materi pelajaran dengan cara yang menyenangkan
+               dan mudah dipahami. Temukan topik yang kamu minati dan mulai
+               belajar sekarang!
+            </p>
+         </div>
+      </header>
+
+      <!-- main -->
+      <main>
+         <!-- material-grid -->
+         <section id="material">
+            <div class="material-search">
+               <input
+                  type="text"
+                  id="inputSearchFilter"
+                  onkeyup="searchMaterials()"
+                  placeholder="Cari Materi..." />
+            </div>
+            <div class="material-container">
+               <menu id="materialList">
+                  <li>
+                     <div class="material-item mi1">
+                        <h3>Hakikat Pengetahuan Alam dan Metode Ilmiah</h3>
+                        <img src="../svg/cabin.svg" alt="cabin" width="200" />
+                        <button type="button" data-open-modal="1">
+                           Detail
+                        </button>
+                        <dialog id="dialog" data-modal="1">
+                           <div class="dialog-container">
+                              <div class="dialog-main">
+                                 <button type="button" data-close-modal="1">
+                                    <svg
+                                       xmlns="http://www.w3.org/2000/svg"
+                                       width="16"
+                                       height="16"
+                                       fill="currentColor"
+                                       class="bi bi-x-lg"
+                                       viewBox="0 0 16 16">
+                                       <path
+                                          d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                    </svg>
+                                 </button>
+                                 <div class="dialog-main-text">
+                                    <h3>
+                                       Hakikat Pengetahuan Alam dan Metode
+                                       Ilmiah
+                                    </h3>
+                                    <p>
+                                       Pelajari dasar-dasar pengetahuan alam,
+                                       karakteristiknya, dan bagaimana metode
+                                       ilmiah digunakan untuk memahami fenomena
+                                       alam secara sistematis.
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="dialog-main">
+                                 <img
+                                    src="../svg/cabin.svg"
+                                    alt="cabin"
+                                    width="200" />
+                                 <button
+                                    disabled
+                                    type="button"
+                                    class="mulai-materi-button">
+                                    Mulai Materi
+                                 </button>
+                              </div>
+                           </div>
+                        </dialog>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="material-item mi2">
+                        <h3>Pengukuran dalam Kerja Ilmiah</h3>
+                        <img src="../svg/camp.svg" alt="camp" width="200" />
+                        <button type="button" data-open-modal="2">
+                           Detail
+                        </button>
+                     </div>
+                     <dialog id="dialog" data-modal="2">
+                        <div class="dialog-container">
+                           <div class="dialog-main">
+                              <button type="button" data-close-modal="2">
+                                 <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-x-lg"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                       d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                 </svg>
+                              </button>
+                              <div class="dialog-main-text">
+                                 <h3>Pengukuran dalam Kerja Ilmiah</h3>
+                                 <p>
+                                    Pelajari konsep pengukuran, satuan, alat
+                                    ukur, dan pentingnya ketelitian dalam
+                                    melakukan kerja ilmiah untuk mendapatkan
+                                    hasil yang akurat.
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="dialog-main">
+                              <img
+                                 src="../svg/camp.svg"
+                                 alt="camp"
+                                 width="200" />
+                              <button
+                                 disabled
+                                 type="button"
+                                 class="mulai-materi-button">
+                                 Mulai Materi
+                              </button>
+                           </div>
+                        </div>
+                     </dialog>
+                  </li>
+                  <li>
+                     <div class="material-item mi3">
+                        <h3>Materi dan Perubahannya</h3>
+                        <img
+                           src="../svg/environment.svg"
+                           alt="env"
+                           width="200" />
+                        <button type="button" data-open-modal="3">
+                           Detail
+                        </button>
+                     </div>
+                     <dialog id="dialog" data-modal="3">
+                        <div class="dialog-container">
+                           <div class="dialog-main">
+                              <button type="button" data-close-modal="3">
+                                 <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-x-lg"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                       d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                 </svg>
+                              </button>
+                              <div class="dialog-main-text">
+                                 <h3>Materi dan Perubahannya</h3>
+                                 <p>
+                                    Pelajari tentang materi, sifat-sifatnya,
+                                    perubahan fisika dan kimia, serta contoh
+                                    peristiwa perubahan materi dalam kehidupan
+                                    sehari-hari.
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="dialog-main">
+                              <img
+                                 src="../svg/environment.svg"
+                                 alt="env"
+                                 width="200" />
+                              <button type="button" class="mulai-materi-button">
+                                 Mulai Materi
+                              </button>
+                           </div>
+                        </div>
+                     </dialog>
+                  </li>
+                  <li>
+                     <div class="material-item mi4">
+                        <h3>Energi dan Perubahannya</h3>
+                        <img src="../svg/fire.svg" alt="fire" width="200" />
+                        <button type="button" data-open-modal="4">
+                           Detail
+                        </button>
+                     </div>
+                     <dialog id="dialog" data-modal="4">
+                        <div class="dialog-container">
+                           <div class="dialog-main">
+                              <button type="button" data-close-modal="4">
+                                 <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-x-lg"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                       d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                 </svg>
+                              </button>
+                              <div class="dialog-main-text">
+                                 <h3>Energi dan Perubahannya</h3>
+                                 <p>
+                                    Pelajari berbagai bentuk energi, perubahan
+                                    energi, serta penerapan energi dalam
+                                    kehidupan sehari-hari dan dampaknya terhadap
+                                    lingkungan.
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="dialog-main">
+                              <img
+                                 src="../svg/fire.svg"
+                                 alt="fire"
+                                 width="200" />
+                              <button
+                                 disabled
+                                 type="button"
+                                 class="mulai-materi-button">
+                                 Mulai Materi
+                              </button>
+                           </div>
+                        </div>
+                     </dialog>
+                  </li>
+                  <li>
+                     <div class="material-item mi5">
+                        <h3>Keanekaragaman Makhluk Hidup</h3>
+                        <img src="../svg/moon.svg" alt="moon" width="200" />
+                        <button type="button" data-open-modal="5">
+                           Detail
+                        </button>
+                     </div>
+                     <dialog id="dialog" data-modal="5">
+                        <div class="dialog-container">
+                           <div class="dialog-main">
+                              <button type="button" data-close-modal="5">
+                                 <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-x-lg"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                       d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                 </svg>
+                              </button>
+                              <div class="dialog-main-text">
+                                 <h3>Keanekaragaman Makhluk Hidup</h3>
+                                 <p>
+                                    Pelajari keanekaragaman makhluk hidup,
+                                    klasifikasi, ciri-ciri, dan pentingnya
+                                    menjaga kelestarian makhluk hidup di
+                                    lingkungan sekitar.
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="dialog-main">
+                              <img
+                                 src="../svg/moon.svg"
+                                 alt="moon"
+                                 width="200" />
+                              <button
+                                 disabled
+                                 type="button"
+                                 class="mulai-materi-button">
+                                 Mulai Materi
+                              </button>
+                           </div>
+                        </div>
+                     </dialog>
+                  </li>
+                  <li>
+                     <div class="material-item mi6">
+                        <h3>Bioteknologi</h3>
+                        <img src="../svg/out.svg" alt="out" width="200" />
+                        <button type="button" data-open-modal="6">
+                           Detail
+                        </button>
+                     </div>
+                     <dialog id="dialog" data-modal="6">
+                        <div class="dialog-container">
+                           <div class="dialog-main">
+                              <button type="button" data-close-modal="6">
+                                 <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-x-lg"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                       d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                 </svg>
+                              </button>
+                              <div class="dialog-main-text">
+                                 <h3>Bioteknologi</h3>
+                                 <p>
+                                    Pelajari dasar-dasar bioteknologi,
+                                    jenis-jenisnya, penerapan dalam kehidupan
+                                    sehari-hari, serta dampaknya terhadap
+                                    lingkungan dan kesehatan.
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="dialog-main">
+                              <img src="../svg/out.svg" alt="out" width="200" />
+                              <button
+                                 disabled
+                                 type="button"
+                                 class="mulai-materi-button">
+                                 Mulai Materi
+                              </button>
+                           </div>
+                        </div>
+                     </dialog>
+                  </li>
+               </menu>
+            </div>
+         </section>
+      </main>
+
+      <script src="../js/content.js"></script>
+   </body>
+</html>

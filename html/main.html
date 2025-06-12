@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Fisosio | Beranda </title>
+      <link rel="stylesheet" href="../css/main.css" />
+   </head>
+   <body>
+      <!-- nav -->
+      <nav id="navBar">
+         <a class="home-link" href="main.html">Fisosio</a>
+         <button id="openSidebar" type="button" onclick="openSidebar()">
+            <svg
+               xmlns="http://www.w3.org/2000/svg"
+               width="16"
+               height="16"
+               fill="currentColor"
+               class="bi bi-list"
+               viewBox="0 0 16 16">
+               <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+         </button>
+         <menu id="navContainer" class="nav-container">
+            <li class="nav-item1">
+               <button id="closeSidebar" type="button" onclick="closeSidebar()">
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     width="16"
+                     height="16"
+                     fill="currentColor"
+                     class="bi bi-x-lg"
+                     viewBox="0 0 16 16">
+                     <path
+                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                  </svg>
+               </button>
+            </li>
+            <li class="nav-item2" id="dropDownParent">
+               <a href="javascript:void(0)"
+                  >Materi
+                  <span
+                     ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-caret-down-fill"
+                        viewBox="0 0 16 16">
+                        <path
+                           d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" /></svg
+                  ></span>
+               </a>
+               <menu id="dropDownChild">
+                  <li><a href="content.html">Pengetahuan Alam</a></li>
+                  <li><a href="#">Pengetahuan Sosial</a></li>
+               </menu>
+            </li>
+            <li class="nav-item3"><a href="#">Latihan</a></li>
+            <li class="nav-item4"><a href="other.html">Lainnya</a></li>
+            <li class="nav-item5">
+               <button id="startButton" type="button">Mulai</button>
+            </li>
+         </menu>
+      </nav>
+
+      <!-- header -->
+      <header>
+         <div class="header-text">
+            <h2>Mau Belajar?</h2>
+            <h1>Fisosio</h1>
+            <p>
+               Temukan materi IPA dan IPS favorit mu disini, kembangkan logika
+               dan pengetahuanmu menjadi lebih mendalam.
+            </p>
+            <div class="header-button">
+               <button type="button" id="header-button1">Mulai</button>
+               <button type="button" id="header-button2">
+                  Pelajari lebih lanjut
+               </button>
+            </div>
+         </div>
+         <img
+            class="header-image"
+            src="../svg/forest.svg"
+            alt="Hutan dengan dua orang di dalamnya." />
+      </header>
+
+      <!-- main -->
+      <main>
+         <!-- preview -->
+         <section id="preview">
+            <div class="preview-main-text">
+               <h1>Apa yang bisa anda temukan disini?</h1>
+               <p>
+                  Di sini, Anda akan menemukan beragam konten pembelajaran yang
+                  disajikan secara interaktif dan menarik. Dari materi
+                  pembelajaran yang komprehensif hingga latihan soal yang
+                  menantang, semuanya dirancang untuk membantu Anda memahami
+                  konsep-konsep penting dengan cara yang menyenangkan.
+               </p>
+            </div>
+            <div class="preview-container">
+               <div class="preview-item pi1" style="grid-area: pi1">
+                  <img
+                     src="../svg/book.svg"
+                     alt="Buku hijau yang di tumpuk dua, dibagian atas buku ada pena." />
+                  <div class="preview-text pt1">
+                     <h2>Materi</h2>
+                     <p>Yang banyak dan menarik untuk dibahas</p>
+                  </div>
+               </div>
+               <div class="preview-item pi2" style="grid-area: pi2">
+                  <img
+                     src="../svg/task.svg"
+                     alt="Dua orang yang sedang membawa kertas, melihat ke arah kertas yang berisi list, salah satunya sudah di centang." />
+                  <div class="preview-text pt2">
+                     <h2>Tugas</h2>
+                     <p>Yang menantang untuk dijawab</p>
+                  </div>
+               </div>
+               <div class="preview-item pi3" style="grid-area: pi3">
+                  <img
+                     src="../svg/fact.svg"
+                     alt="2 buah planet dan satu pesawat di luar angkasa." />
+                  <div class="preview-text pt3">
+                     <h2>Fakta Unik</h2>
+                     <p>Yang akan selalu menunggu di sela belajar</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- feature -->
+         <section id="feature">
+            <div class="feature-main-text">
+               <h1>Apa saja fitur yang kami tawarkan disini?</h1>
+               <p>
+                  Kami menawarkan berbagai fitur yang dirancang untuk mendukung
+                  perjalanan pembelajaran Anda. Dari visual yang menarik hingga
+                  konten yang selalu diperbarui, semuanya kami hadirkan untuk
+                  memberikan pengalaman belajar terbaik.
+               </p>
+            </div>
+            <div class="feature-container">
+               <div class="feature-item fi1" style="grid-area: fi1">
+                  <img src="../svg/visual.svg" alt="visual" />
+                  <div class="feature text ft1">
+                     <h2>Visual</h2>
+                     <p>Yang ciamik dan minimalis</p>
+                  </div>
+               </div>
+               <div class="feature-item fi2" style="grid-area: fi2">
+                  <img src="../svg/video.svg" alt="video" />
+                  <div class="feature-text ft2">
+                     <h2>Video</h2>
+                     <p>Yang dapat membantumu memahami materi</p>
+                  </div>
+               </div>
+               <div class="feature-item fi3" style="grid-area: fi3">
+                  <img src="../svg/gratis.svg" alt="gratis" />
+                  <div class="feature-text ft3">
+                     <h2>Gratis</h2>
+                     <p>Semua fitur untuk dicoba</p>
+                  </div>
+               </div>
+               <div class="feature-item fi4" style="grid-area: fi4">
+                  <img src="../svg/fitur.svg" alt="fitur" />
+                  <div class="feature-text ft4">
+                     <h2>Fitur</h2>
+                     <p>Yang tiada habisnya setiap minggu</p>
+                  </div>
+               </div>
+               <div class="feature-item fi5" style="grid-area: fi5">
+                  <img src="../svg/praktik.svg" alt="praktik" />
+                  <div class="feature-text ft5">
+                     <h2>Praktik</h2>
+                     <p>Yang membuat logika mu bekerja sepenuhnya</p>
+                  </div>
+               </div>
+               <div class="feature-item fi6" style="grid-area: fi6">
+                  <img src="../svg/konten.svg" alt="konten" />
+                  <div class="feature-text ft6">
+                     <h2>Konten</h2>
+                     <p>Tanpa batas yang senantiasa menunggu</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- information -->
+         <section id="information">
+            <div class="information-main-text">
+               <h1>Pertanyaan yang sering ditanyakan</h1>
+            </div>
+            <div class="information-container">
+               <div class="information-item ii1">
+                  <h2>Apakah perlu akun?</h2>
+                  <p>
+                     Tidak perlu akun untuk belajar disini, semua bisa digunakan
+                     langsung setelah anda menekan tombol mulai.
+                  </p>
+               </div>
+               <div class="information-item ii2">
+                  <h2>Apakah privasi terjaga?</h2>
+                  <p>
+                     Website ini tidak menyimpan data ada, data yang disimpan
+                     hanyalah progres anda belajar.
+                  </p>
+               </div>
+               <div class="information-item ii3">
+                  <h2>Apakah ini gratis?</h2>
+                  <p>
+                     Semua fitur disini gratis, namun jika anda ingin ber
+                     donasi, anda bisa datang ke github kami.
+                  </p>
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <!-- footer -->
+      <footer>
+         <!-- footer-top -->
+         <section id="footer-top">
+            <h2>Fisosio</h2>
+            <p>From Us, For U</p>
+         </section>
+
+         <!-- footer-center -->
+         <section id="footer-center">
+            <div class="center-item ci1">
+               <h3>Tentang</h3>
+               <p>
+                  Fisosio adalah website media pembelajaran interaktif yang
+                  digunakan sebagai pelengkap dalam pembelajaran di seluruh
+                  nusantara, mengedepankan visual dan praktik yang praktis
+               </p>
+            </div>
+            <div class="center-item ci2">
+               <h3>Petunjuk</h3>
+               <menu id="petunjukMenu">
+                  <li><a href="#">Materi</a></li>
+                  <li><a href="#">Tugas</a></li>
+                  <li><a href="#">Lainnya</a></li>
+               </menu>
+            </div>
+            <div class="center-item ci3">
+               <h3>Ikuti</h3>
+               <menu id="ikutiMenu">
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">YouTube</a></li>
+                  <li><a href="#">GitHub</a></li>
+               </menu>
+            </div>
+         </section>
+
+         <!-- footer-bottom -->
+         <section id="footer-bottom">
+            <p>&copy; 2025 Fisosio. All Right Reserve</p>
+         </section>
+      </footer>
+
+      <!-- javascript -->
+      <script src="../js/main.js"></script>
+   </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fisosio | Sign In</title>
+        <link rel="stylesheet" href="../css/stratup.css" />
+    </head>
+    <body>
+        <!-- main -->
+        <main>
+            <!-- form -->
+            <section id="form-container">
+                <form action="#" method="post" class="form-pendaftaran">
+                    <h2>Pendaftaran</h2>
+
+                    <!-- nama -->
+                    <div class="form-group">
+                        <label for="nama">Nama</label>
+                        <input
+                            type="text"
+                            id="input-nama"
+                            name="nama"
+                            required
+                            placeholder="Masukkan Nama" />
+                    </div>
+
+                    <!-- kelas -->
+                    <div class="form-group">
+                        <label for="kelas">Kelas</label>
+                        <select id="input-kelas" name="kelas" required>
+                            <option value="">Pilih Kelas</option>
+                            <option value="10">Kelas 10</option>
+                            <option value="11">Kelas 11</option>
+                            <option value="12">Kelas 12</option>
+                        </select>
+                    </div>
+
+                    <!-- jurusan -->
+                    <div class="form-group">
+                        <label for="jurusan">Jurusan</label>
+                        <input
+                            type="text"
+                            id="input-jurusan"
+                            name="jurusan"
+                            required
+                            placeholder="Masukkan Jurusan" />
+                    </div>
+
+                    <!-- email -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="input-email"
+                            name="email"
+                            required
+                            placeholder="Masukkan Email" />
+                    </div>
+
+                    <!-- password -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input
+                            type="password"
+                            name="password"
+                            id="input-password"
+                            placeholder="Masukkan Password" />
+                    </div>
+                    <button type="submit">Daftar</button>
+                </form>
+            </section>
+
+            <div class="start-img">
+                <img src="../svg/form.svg" alt="form" />
+            </div>
+        </main>
+    </body>
+</html>

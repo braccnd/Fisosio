@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Fisosio | Lainnya</title>
+      <link rel="stylesheet" href="../css/other.css" />
+   </head>
+   <body>
+      <!-- nav -->
+      <nav id="navBar">
+         <a class="home-link" href="main.html">Fisosio</a>
+         <button id="openSidebar" type="button" onclick="openSidebar()">
+            <svg
+               xmlns="http://www.w3.org/2000/svg"
+               width="16"
+               height="16"
+               fill="currentColor"
+               class="bi bi-list"
+               viewBox="0 0 16 16">
+               <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+         </button>
+         <menu id="navContainer" class="nav-container">
+            <li class="nav-item1">
+               <button id="closeSidebar" type="button" onclick="closeSidebar()">
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     width="16"
+                     height="16"
+                     fill="currentColor"
+                     class="bi bi-x-lg"
+                     viewBox="0 0 16 16">
+                     <path
+                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                  </svg>
+               </button>
+            </li>
+            <li class="nav-item2" id="dropDownParent">
+               <a href="javascript:void(0)"
+                  >Materi
+                  <span
+                     ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-caret-down-fill"
+                        viewBox="0 0 16 16">
+                        <path
+                           d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" /></svg
+                  ></span>
+               </a>
+               <menu id="dropDownChild">
+                  <li><a href="content.html">Pengetahuan Alam</a></li>
+                  <li><a href="#">Pengetahuan Sosial</a></li>
+               </menu>
+            </li>
+            <li class="nav-item3"><a href="#">Latihan</a></li>
+            <li class="nav-item4"><a href="other.html">Lainnya</a></li>
+            <li class="nav-item5">
+               <button id="startButton" type="button">Mulai</button>
+            </li>
+         </menu>
+      </nav>
+
+      <!-- main -->
+      <main>
+         <!-- feedback -->
+         <section id="feedback">
+            <form action="#" method="post" class="form-container">
+               <h2>Kontak</h2>
+               <div class="form-group">
+                  <label for="name">Nama</label>
+                  <input
+                     type="text"
+                     name="name"
+                     id="name"
+                     placeholder="Masukan Nama" />
+                  <br />
+                  <label for="email">Email</label>
+                  <input
+                     type="email"
+                     name="email"
+                     id="email"
+                     placeholder="Masukan Email" />
+                  <br />
+                  <label for="komentar">Komentar</label>
+                  <textarea
+                     name="pesan"
+                     id="pesan"
+                     placeholder="Masukan Komentar"></textarea>
+               </div>
+               <button
+                  type="submit"
+                  onclick="alert('Komentar anda sudah terkirim')">
+                  Submit
+               </button>
+            </form>
+         </section>
+         <!-- tentang kami -->
+         <section id="tentang">
+            <div class="tentang-container">
+               <div class="tentang-item">
+                  <p>
+                     <b>Fisosio</b> adalah website pembelajaran berbasis online
+                     yang berisikan mata pelajaran IPA dan IPS. Website ini
+                     memberikan pengalaman yang menarik dan menyenangkan juga
+                     materi dan tugas yang menaikkan IQ mu.
+                  </p>
+                  <img src="../svg/nature.svg" alt="nature" width="250" />
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <script src="../js/other.js"></script>
+   </body>
+</html>
